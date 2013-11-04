@@ -28,10 +28,12 @@ switch($sendVal){
 }
 
 $deviceNum = substr($devId, -1);
-
-exec("/var/www/send " . $deviceNum . " " . $sendVal);
+exec("gpio export 0 out");
+exec("/var/www/send " . $deviceNum . " " . $sendVal, $output, $ret);
 
 $result->returnCode = 1;
+$result->msg = $output;
+$result->data = $ret;
 
 echo json_encode($result);
 return;
