@@ -27,13 +27,16 @@ switch($sendVal){
 		return;
 }
 
-$deviceNum = substr($devId, -1);
-exec("gpio export 0 out");
-exec("/var/www/send " . $deviceNum . " " . $sendVal, $output, $ret);
+$deviceNum = substr($devId, -3);
+$cmd = $deviceNum . $sendVal;
+
+//exec("sudo /home/pi/dloads/rcswitch-pi/send " . $deviceNum . " " . $sendVal, $output, $ret);
+//exec("sudo /home/pi/dloads/rcswitch-pi/receive " . $deviceNum . " " . $sendVal, $output, $ret);
+//exec("sudo /usr/bin/python /opt/test.py", $output, $ret);
+exec("sudo /usr/bin/python /opt/test.py " . $cmd, $output);
 
 $result->returnCode = 1;
 $result->msg = $output;
-$result->data = $ret;
 
 echo json_encode($result);
 return;

@@ -35,8 +35,8 @@
 			<table id="deviceTable">
 				<tr>
 					<td><div data-role="fieldcontain" class="ui-field-contain ui-body ">
-							<label for="device_1">Lamp:</label> <select name="device_1"
-								id="device_1" data-role="slider" class="dev_switchOF">
+							<label for="device_101">Lamp:</label> <select name="device_101"
+								id="device_101" data-role="slider" class="dev_switchOF">
 								<option value="off">Off</option>
 								<option value="on" selected>On</option>
 							</select>
@@ -46,8 +46,8 @@
 				<tr>
 					<td>
 						<div data-role="fieldcontain" class="ui-field-contain ui-body ">
-							<label for="device_2">Night Light:</label> <select
-								name="device_2" id="device_2" data-role="slider" class="dev_switchOF">
+							<label for="device_102">Night Light:</label> <select
+								name="device_102" id="device_102" data-role="slider" class="dev_switchOF">
 								<option value="off">Off</option>
 								<option value="on">On</option>
 							</select>
