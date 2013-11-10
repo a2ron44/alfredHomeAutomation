@@ -64,6 +64,14 @@
 		<site>
 			<debug>true</debug>
 		</site>
+		<os>
+			<path>
+			    <logPrefix>alfred_</logPrefix>
+			    <siteFolder>alfred</siteFolder>
+				<log>/alfred/logs</log>
+				<tmp>/alfred/tmp</tmp>
+			</path>
+		</os>
 		<phpSettings>
 		    <sessionexpiresecs>11900</sessionexpiresecs>
 			<display_startup_errors>1</display_startup_errors>
