@@ -1,0 +1,28 @@
+<div id="contentCenter">
+<?php
+if (! empty ( $this->errorMessage )) {
+	echo '<p class="pageErrors">';
+	echo $this->errorMessage;
+	echo '</p>';
+}
+?>
+<br />
+	<br />
+	<p class="instruction">Enter Login Credentials</p>
+	<div id="loginDiv" class="ui-corner-all">
+	
+		<?php
+		echo $this->form->render ();
+		?>
+	
+	</div>
+	<br />
+	<br />
+</div>
+<script type="text/javascript">
+		if($('#email').val() > ''){		
+			$('#pswrd').focus();
+		} else {
+			$('#email').focus();
+		}
+</script>

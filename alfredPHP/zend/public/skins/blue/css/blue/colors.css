@@ -1,0 +1,43 @@
+/* Colors File */
+
+/* Global HTML*/
+body{background-color:#FBFBEF;}
+html{background-color:#D8D8D8;color: #24221F;}
+
+label {background-color:#46a;color:#E6E6E6; }
+label.required{color:#E6E6E6;}
+
+input[type=text],input[type=password],select {color: #585858;}
+input[type=text]:focus, input[type=password]:focus {
+	border-color:#666;
+	background-color:#64a4db;
+	color: #000;
+}
+a, a:visited,  a:ACTIVE{color:#0404B4;}
+a:hover {color:#46a;}
+
+/* Global classes */
+.row {background-color:#fff;}
+.altRow {background-color:#E0ECF8;}
+.backLink, .backLink:visited{color:#2E64FE;}
+.indexPageLink, .indexPageLink:visited {color:#2E64FE;}
+
+
+/* Header Stuff */
+#header { background-color:#248;color: #fff;}
+#sitename { color:#fff;}
+#headerMenu ul li {border-left: 1px #fff solid;}
+#headerMenu ul li a {color: #fff;}
+#headerMenu a:hover {color:#819FF7;}
+#headBottomBorder { background-color:#0B173B;}
+
+#topMessage {color:red;font-weight:bold;background-color:#D0FA58;}
+
+/* Footer Stuff */
+
+#footer {background-color:#248;color: #fff;}
+#rightFooter a{color:#fff;}
+#footer {background-color:#248;color: #fff;}
+
+/* Login Page  */
+#loginDiv {background-color:#BDBDBD }

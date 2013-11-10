@@ -1,0 +1,33 @@
+/* 
+    Document   : main
+    Created on : Dec 17, 2011, 6:38:18 PM
+    Author     : Aaron Haight
+    Description:
+        Purpose of the stylesheet follows.
+
+/* Table Stuff */
+
+/* Global Table Stuff */
+th {background-color:#46a;color:#f6f6f6;}
+.even {background-color:transparent;}
+.odd {background-color:#E6E6E6;}
+
+
+/* Default Table  -  class  tableDiv  */
+.tableDiv {margin:3px auto;}
+.tableDiv table {table-layout: fixed;margin:0;padding:0;border-collapse:collapse;width:700px;} 
+.tableDiv th {border:1px solid black;text-align:center;}
+.tableDiv td {border:1px solid black;text-align:center;}
+.floatTableSpan {overflow:auto;height:550px;}
+.tableTitle {font-size:14px;margin:0 auto 5px auto;width:120px;font-weight:bold;}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,521 @@
+/* 
+    Document   : main
+    Created on : Dec 17, 2011, 6:38:18 PM
+    Author     : Aaron Haight
+    Description:
+        Purpose of the stylesheet follows.
+
+/* Global Classes */
+.errors {
+	color: red;
+}
+
+.textRed {
+	color: red;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.pageErrors {
+	color: red;
+}
+
+.instruction {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear{clear:both;}
+
+.hide {
+	display: none;
+}
+
+.indexPageLink, .indexPageLink:visited{
+	display: block;
+	text-align:left;
+	margin-top: 15px;
+	font-size: 20px;
+	width:200px;
+	
+}
+.indexPageLink img{padding-right:3px;border:none;}
+
+.menuLink{text-decoration:underline;color:blue;}
+
+.backLink {
+	font-size: 18px;
+	margin: 0 0 10px 0;
+	display: block;
+	float:left;
+	border:1px solid;
+}
+
+.rfLabel {
+	width: 70px;
+}
+
+.saveBtn {
+	width: 100px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.inline { display:inline;}
+.underline {text-decoration:underline;}
+
+/* Global Elements */
+h1 {
+	font-size: 28px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 22px;
+	text-align: center;
+	margin: 5px 0 5px 0;
+}
+
+h3 {
+	font-size: 18px;
+	text-align: center;
+}
+
+h4 {
+	font-size: 15px;
+	text-align: center;
+}
+/* Generic Form */
+form span {
+	display: block;
+}
+
+span.element-group {
+	float: left;
+	margin: 5px 0 0 25px;
+}
+
+span.element-group input[type=checkbox]{width:100px;margin-top:12px; }
+form ul.errors {
+	padding: 0;
+	font-size: 12px;
+	list-style: none;
+	margin: 1px 0;
+}
+
+span.submit-group,span.submit-left {
+	display: block;
+	clear: both;
+	padding-top: 10px;
+	margin-top: 20px;
+}
+
+span.submit-group {
+	text-align: right;
+}
+
+span.submit-left {
+	text-align: left;
+}
+
+label {
+	width: 125px;
+	height: 28px;
+	margin-right: 10px;
+	padding-top: 8px;
+	padding-left: 10px;
+	float: left;
+	display: block;
+	font-weight: normal;
+	line-height: 1.1;
+}
+
+input[type=text],input[type=password],select {
+	width: 200px;
+	margin-top: 5px;
+	font: bold 14px Arial;
+	padding: 3px 5px 3px 10px;
+}
+select {width:220px;}
+
+input[type=text]:focus,input[type=password]:focus {
+	border-color: #666;
+	background-color: #64a4db;
+}
+
+input[type=button] {
+	width: 130px;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+}
+
+
+
+input[readonly="readonly"]{background-color:#ddd;}
+input[readonly="readonly"]:focus {background-color:#ddd;border:none;}
+span.hint {font-size:12px;width:200px;display:inline-block;text-align:left;}
+/* Global HTML*/
+root {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+html,div,span {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+body {
+	width: 1000px;
+	margin: 3px auto;
+}
+
+tr {
+	height: 25px;
+}
+
+td {
+	text-align: center;
+}
+
+/* Add form Form */
+#addLineForm form {width:875px !important;}
+#addLineForm .zend_form{margin:20px auto;}
+#addLineForm .element-group{height:45px;font-size:12px;}
+#addLineForm .element-group input[type=text],
+#addLineForm .element-group select {width:120px;display:block;float:none;font-size:12px;}
+#addLineForm .errors{max-width:120px;}
+#addLineForm #exp_qty {width:35px;}
+#addLineForm label{width:60px;height:20px;display:block;float:none;}
+#addLineForm label[for="exp_qty"]{width:44px;}
+#addLineForm .submit-group{float:none;clear:none;margin-left:10px;display:inline-block;}
+
+
+
+/* Header Stuff */
+#header {
+	padding-top: 5px;
+	height: 75px;
+}
+
+#headTop {
+	float: left;
+	width: 300px;
+	text-align: center;
+}
+
+#headLogin {
+	float: right;
+	margin: 5px 10px 0 0;
+	width: 300px;
+	text-align: right;
+	font-size: 12px;
+}
+
+#headLogin p {
+	margin: 0;
+	padding: 0;
+}
+
+#headLogin input[type=button] {
+	font-size: 12px;
+	width: 70px;
+}
+
+.loginName {
+	display: inline;
+}
+
+#headLogo {
+	float: left;
+	width: 330px;
+	margin-left: 5px;
+}
+
+#headLogo img {
+	float: left;
+	height: 75px;
+	margin-left: 5px;
+}
+
+#sitename {
+	margin: 10px 0 0 0;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#loginBlock {
+	margin: 10px 0 0 0;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#headerMenu {
+	float: right;
+	height: 25px;
+	width: 660px;
+	margin-top: 12px;
+	text-align: right;
+}
+
+#headerMenu ul {
+	margin: 0;
+	height: inherit;
+	padding-top: 4px;
+	list-style: none;
+	float: right;
+}
+
+#headerMenu ul li {
+	float: left;
+}
+
+#headerMenu ul li.last {
+	border-right: none;
+}
+
+#headerMenu ul li a {
+	display: block;
+	margin: 0 10px 0 10px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#headerMenu a:hover {
+	text-decoration: underline;
+}
+
+#headBottomBorder {
+	height: 3px;
+	margin: 0;
+	padding: 0;
+}
+
+#topMessage {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Login Page */
+#loginDiv {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#loginDiv form {
+	font-size: 18px;
+	padding: 10px 0;
+}
+
+#loginDiv form span.element-group {
+	margin-left: 55px;
+}
+
+#loginDiv form ul.errors {
+	margin-left: 140px;
+}
+
+#loginDiv form span.submit-group {
+	
+}
+
+#loginDiv form input[type=submit] {
+	margin: 15px 40px 0 0;
+}
+
+#loginDiv.errors {
+	margin: 0;
+	padding: 0;
+}
+
+#loginDiv label[for=remember] {background-color:transparent !important;color:#24221F;font-weight:bold;
+font-size:12px;text-align:right;margin-top:4px}
+
+/* Content Div */
+#content {
+	width: 980px;
+	margin: 0 5px 0 10px;
+	min-height: 640px;
+	text-align: left;
+}
+
+#content h2 {
+	margin-top: 15px;
+}
+
+#contentCenter {
+	text-align: center;
+}
+
+#contentLeft {
+	float: left;
+	width: 600px;
+	text-align: center;
+	margin-left: 10px;clear:left;
+}
+
+#contentRight {
+	float:right;
+	height: 500px;
+	width: 320px;
+}
+
+/* Footer */
+#footer {
+	clear: both;
+	height: 41px;
+}
+
+#leftFooter {
+	float: left;
+	width: 390px;
+	margin: 10px 0 0 10px;
+}
+
+#rightFooter {
+	float: right;
+	width: 400px;
+	margin-top: 10px;
+}
+
+#sslSeal {
+	float: right;
+	width: 90px;
+}
+
+#sslSeal img {
+	width: 75px;
+	height: 40px;
+}
+
+/* Setup Pages */
+#setupList {
+	margin: 20px auto 10px auto;
+	height: 600px;
+	clear:both;
+
+}
+
+.setupLastInfo{
+	float:right;width:300px;text-align:left;
+}
+#setupList .tableDiv {width:966px;}
+#setupList .tableDiv table{width:950px;}
+#savingGif {font-size:12px;color:blue;margin-bottom:10px;margin-top:0;visibility:hidden;}
+.listLink a {
+	text-decoration: none;
+	display: block;
+	margin: 0px auto;
+	font-size: 12px;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid black;
+	width: 100px;
+	padding: 1px 3px;
+}
+
+.setupSaveBtn {
+	margin-right: 150px;
+}
+
+#setupAdd form {
+	margin: 40px 0 0 50px;
+	width:600px;
+}
+
+.addLink{
+	float:right;
+	font-size:16px;
+}
+.date-element .hint {width:23px;}
+.dateCalBtn { float:right;}
+
+/* IB/OB Setup */
+#summaryLeft {width:390px;float:left;clear:left;}
+#refStatus {float:right;width:300px;margin-right:50px;font-size:14px;font-weight:bold;
+height:25px;line-height:25px;}
+#refStatus label {height:20px;width:60px;}
+#setupForm {width:370px;background-color:#ddd; }
+#setupForm h3{background-color:#000;color:#fff;margin-top:2px}
+#setupForm input[type=text] {width:140px;}
+#setupForm select {width:190px;}
+#setupForm label{width:90px;}
+#setupForm textarea {   resize: none; }
+#setupForm #saveChange {
+	margin: -20px 0 0 70px;
+	visibility: hidden;
+}
+#summaryContent{width:580px;float:right;}
+#summaryContent #viewDetails {min-width:150px;}
+#summaryFieldset{width:310px;float:left;}
+#summaryTable {text-align:center;border-spacing:0;}
+#functionFieldset{width:190px;float:right;}
+#setupFunctions p{margin:15px auto;text-align:center;}
+#setupFunctions #cancelIbnBtn {color:red;}
+
+/* IB/OB Details */
+#refInfo{height:45px;clear:left;margin-bottom:10px;}
+#refInfo .infoSpan{float:left;width:300px;}
+#refInfo span {height:25px;padding:2px;line-height:25px;width:170px;float:left;}
+#refInfo label {height:25px;padding:2px;line-height:25px;width:90px;text-align:center;float:left;}
+#refDetails{border:1px solid;height:480px;}
+
+#refAdd{height:95px;text-align:center;}
+#refAdd form, #refAdd .zend_form{padding:0;margin:5px auto;}
+#refAdd #inactiveMsg{text-align:center;font-weight:bold;}
+#refAdd #addLineBtn{margin:20px auto}
+
+/* IB/OB Search */
+#searchForm {width:230px;background-color:#ddd;float:left; }
+#searchForm h3{background-color:#000;color:#fff;margin-top:2px}
+#searchForm .element-group{margin-left:2px;}
+#searchForm .date-element{width:110px;float:left;margin-left:2px;}
+#searchForm #search_rcv_start,#searchForm #search_rcv_end {width:63px;font-size:12px;}
+#searchForm input[type=text] {width:140px;}
+#searchForm select {width:120px;}
+#searchForm label{width:100px;}
+#searchForm #saveChange {
+	margin: -20px 0 0 70px;
+	visibility: hidden;
+}
+#searchRight{float:left;margin-left:5px;width:730px}
+#searchRight .addNew{float:right;margin-right:10px;}
+#searchTable{font-size:12px;}
+#searchTable .refLink{font-size:14px;}
+/* Admin Roles */
+#editRoleTable, #editRoleResourceTable {font-size:12px;}
+
+/* Admin Menu */
+#menuMainMenus { width:190px;height:300px;border:1px solid black;float:left;font-size:12px;}
+
+#menuMainChildren { width:700px;height:300px;border:1px solid black;float:right;font-size:12px;}
+#menuHeadSetup{width:350px;height:200px;border:1px solid black;font-size:12px;float:left;clear:both;}
+#menuResources{width:600px;border:1px solid black;font-size:10px;float:right;}
+#adminReportSetup {clear:both;}

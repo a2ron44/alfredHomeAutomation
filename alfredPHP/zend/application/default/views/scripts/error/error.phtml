@@ -1,0 +1,28 @@
+
+<div id="x" style="text-align: left;">
+
+	<?php if($this->showEmailLink) : ?>
+		<p>There was an unexpected error.  To report this problem, please email <?php echo Base_Setup::SITE_EMAIL_SUPPORT;?>.</p>
+	<?php endif ?>
+	<?php if($this->showDebug == true) :  ?>
+		<h3>Exception information:</h3>
+		<p>
+			<b>Message:</b>
+			<?php echo $this->escape($this->exception->getMessage()); ?>
+		</p>
+	
+		<h3>Stack trace:</h3>
+		<pre><?php echo $this->exception->getTraceAsString() ?>
+		 </pre>
+	
+		<h3>Request Parameters:</h3>
+		<pre>
+			<?php echo $this->escape(var_export($this->request->getParams(), true)) ?>
+		</pre>
+
+	<?php endif ?>
+
+	<p style="text-align: center;">
+		<a href="<?php echo $this->baseUrl();?>/index/index">Return To Main</a>
+	</p>
+</div>

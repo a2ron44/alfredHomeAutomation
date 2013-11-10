@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <?php 
+    //load skin
+    $this->loadSkin($this->skin);
+    $this->headLink()->appendStylesheet( $this->baseUrl() . '/public/styles/main.css');
+    $this->headLink()->appendStylesheet( $this->baseUrl() . '/public/styles/table.css');
+    $this->headLink()->appendStylesheet( $this->baseUrl() . '/public/styles/jquery-ui-1.10.3.custom.min.css');
+    echo $this->headScript();
+    echo $this->headTitle();
+	echo $this->headLink();		
+	?>	
+<!--[if IE 9]>
+<link href="<?php echo $this->baseUrl();?>/public/styles/iehacks.css" media="screen" rel="stylesheet" type="text/css">
+<![endif]-->
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/public/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/public/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/public/js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/public/js/top.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/public/js/enterTab.js"></script>
+</head>
+<body class="ui-corner-all">
+	<div id="header" class="ui-corner-top">
+		<div id="headLogo">
+			<span class="instructions" >Enter Logo Here</span>
+		</div>
+		<div id="headTop">
+			<span id="sitename"><?php echo Base_Setup::SITE_HEAD_TITLE;?></span>
+		</div>
+		<div id="headLogin">
+			<?php echo $this->loggedInCheck();?>
+		</div>
+		<div id="headerMenu">
+			<?php echo $this->LoadMenu();?>
+		</div>
+	</div>
+	<div id="headBottomBorder" class="ui-corner-bottom">&nbsp</div>
+
+	<div id="content">
+		<h2 id="pageTitle" ><?php echo $this->pageTitle;?></h2>
+		
+		<?php if ($this->flashmessages) : ?>
+		<div id="topMessage" class="ui-corner-all errors">
+				<?php foreach ($this->flashmessages as $msg) {
+					if(is_array($msg)){
+							print_r($msg);
+					} else {
+						echo $msg;
+					}		
+				} ?>
+			<script type="text/javascript">      
+						setTimeout( "$('#topMessage').css('background-color', 'transparent')",3500);
+			</script>   
+		</div>     
+		 <?php endif; ?>
+	            <?php echo $this->layout()->content;?>
+    </div>
+</body>
+</html>
+
+
