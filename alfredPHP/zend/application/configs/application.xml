@@ -66,7 +66,7 @@
 		</site>
 		<os>
 			<path>
-			    <logPrefix>alfred_</logPrefix>
+			    <logPrefix>alfred_web_</logPrefix>
 			    <siteFolder>alfred</siteFolder>
 				<log>/alfred/logs</log>
 				<tmp>/alfred/tmp</tmp>

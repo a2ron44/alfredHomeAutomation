@@ -151,7 +151,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$formatter  = new Zend_Log_Formatter_Simple($format);
 		try{
 			$writer     = new Zend_Log_Writer_Stream($config['os']['path']['log'] . DS .
-				 $config['os']['path']['siteFolder'] . DS. $config['os']['path']['logPrefix'] . date('Y-m-d') . '.log', 'ab');
+				// $config['os']['path']['siteFolder'] . DS. 
+					$config['os']['path']['logPrefix'] . date('Y-m-d') . '.log', 'ab');
 			$writer->setFormatter($formatter);
 			$fireBug = new Zend_Log_Writer_Firebug();
 			$writer->addFilter(new Zend_Log_Filter_Priority(Zend_Log::DEBUG, '!='));
