@@ -15,14 +15,14 @@ class Api_TestController extends Zend_Rest_Controller {
 		
 		//authentication
 		
-		$apiKey = $this->getRequest()->getHeader('apikey');
+// 		$apiKey = $this->getRequest()->getHeader('apikey');
 		
-		if(empty($apiKey)){
-			$this->getResponse()->setHttpResponseCode(403)
-			->appendBody("Invalid API Key\n");
-			$this->getRequest()->setDispatched(true);
-			return;
-		}
+// 		if(empty($apiKey)){
+// 			$this->getResponse()->setHttpResponseCode(403)
+// 			->appendBody("Invalid API Key\n");
+// 			$this->getRequest()->setDispatched(true);
+// 			return;
+// 		}
 
 		
 	}
@@ -37,9 +37,9 @@ class Api_TestController extends Zend_Rest_Controller {
 		// not found
 // 		$this->getResponse ()->setHttpResponseCode ( 404 );
 		
-		$id = $this->_request->getParam ( 'id' );
+		//$id = $this->_request->getParam ( 'id' );
 		
-		echo Zend_Json::encode ( $this->_todo [$id] );
+		echo Zend_Json::encode ( $this->_todo ['1'] );
 	}
 	public function postAction() {
 		$this->getResponse ()->setHttpResponseCode ( 201 );
