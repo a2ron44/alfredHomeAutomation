@@ -27,8 +27,9 @@ class Api_TestController extends Zend_Rest_Controller {
 		
 	}
 	public function indexAction() {
-		$this->getResponse ()->setHttpResponseCode ( 200 );
-		// echo Zend_Json::encode ( $this->_todo );
+		$this->getResponse ()->setHttpResponseCode ( 200 )
+         ->setHeader('Content-Type', 'application/json');;
+		 echo Zend_Json::encode ( $this->_todo );
 	}
 	public function headAction() {
 		// action body
