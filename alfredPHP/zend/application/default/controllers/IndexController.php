@@ -1,41 +1,40 @@
 <?php
 class IndexController extends Base_Controller_Action {
-	public function indexAction() {
-		$this->setPageTitle ( "Site Main" );
+
+	public function indexAction(){
+
+		$this->setPageTitle("Site Main");
 		
-		$objInstance = Zend_Auth::getInstance ();
+		$objInstance = Zend_Auth::getInstance();
 		
-		if (! $objInstance->hasIdentity ()) {
-			$this->_helper->redirector ( 'login', 'login' );
+		if(! $objInstance->hasIdentity()){
+			$this->_helper->redirector('login', 'login');
 		}
 	}
-	public function testAction() {
-		$this->ajaxDisableLayout ();
-		$this->ajaxDisableLayout ();
-		// $ch = curl_init ();
+
+	public function testAction(){
+
+		$this->ajaxDisableLayout();
+		$this->ajaxSetNoViewRender();
 		
-		// curl_setopt ( $ch, CURLOPT_URL, "http://whatworkswith.com/zend/api/test/get" );
-		// //curl_setopt ( $ch, CURLOPT_POST, 0 );
-		// // curl_setopt($ch, CURLOPT_POSTFIELDS, "query='where post_parameter = query'");
+		$url = "http://localhost/alfred/alfredPHP/zend/api/device";
 		
-		// // receive server response ...
-		// curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
-		
-		// $server_output = curl_exec ( $ch );
-		// Zend_Debug::dump ( $server_output );
-		
-		$url = "http://whatworkswith.com/zend/api/test/index";
-		
-		$config = array (
+		$config = array(
 				'adapter' => 'Zend_Http_Client_Adapter_Curl',
-				'curloptions' => array (
-						CURLOPT_SSL_VERIFYPEER => false 
-				) 
+				'curloptions' => array(
+						CURLOPT_SSL_VERIFYPEER => false,
+						CURLOPT_SSLVERSION => 3 
+				)
+				 
 		);
-		$client = new Zend_Http_Client ( $url, $config );
-		$response = $client->request('GET');
+		$client = new Zend_Http_Client($url, $config);
+		//$client->setParameterGet('item', 'blah');
+		$response = $client->request('GET')
+			->getBody();
 		
-		Zend_Debug::dump ( $response );
+		Zend_Debug::dump(Zend_Json::decode($response));
+		
+		Zend_Debug::dump( $client->request('GET')->getStatus() );  
 	}
 }
 

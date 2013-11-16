@@ -97,7 +97,7 @@
 			<path>
 			    <logPrefix>alfred_</logPrefix>
 			    <siteFolder>alfred</siteFolder>
-				<log>/Users/a2ron44/weblogs</log>
+				<log>/Users/a2ron44/weblogs/alfred</log>
 				<tmp>/Users/a2ron44/webtmp</tmp>
 			</path>
 		</os>
