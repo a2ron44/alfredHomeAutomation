@@ -34,8 +34,8 @@ $cmd = $deviceNum . $sendVal;
 //exec("sudo /home/pi/dloads/rcswitch-pi/receive " . $deviceNum . " " . $sendVal, $output, $ret);
 //exec("sudo /usr/bin/python /opt/test.py", $output, $ret);
 
-//exec("/usr/bin/python /alfred/www/alfredPHP/controller.py " . $cmd, $output);
-$output = "/usr/bin/python /alfred/www/alfredPHP/controller.py " . $cmd;
+exec("/usr/bin/python /alfred/www/alfredPHP/controller.py " . $cmd, $output);
+
 $result->returnCode = 1;
 $result->msg = $output;
 
