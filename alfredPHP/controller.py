@@ -2,9 +2,7 @@ import smbus, sys
 import time
 # for RPI version 1, use "bus = smbus.SMBus(0)"
 bus = smbus.SMBus(1)
-print sys.argv[1]
-return
-
+var = int(sys.argv[1])
 # This is the address we setup in the Arduino Program
 address = 0x04
 
@@ -18,7 +16,6 @@ def readNumber():
     # number = bus.read_byte_data(address, 1)
     return number
 
-var = sys.argv[1]
 writeNumber(var)
 print "RPI: Hi Arduino, I sent you ", var
 # sleep one second
