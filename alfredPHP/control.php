@@ -27,7 +27,7 @@ switch($sendVal){
 		return;
 }
 
-$deviceNum = substr($devId, -3);
+$deviceNum = substr($devId, -2);
 $cmd = $deviceNum . $sendVal;
 
 //exec("sudo /home/pi/dloads/rcswitch-pi/send " . $deviceNum . " " . $sendVal, $output, $ret);

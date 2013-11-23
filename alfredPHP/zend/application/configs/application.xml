@@ -89,7 +89,7 @@
 				<host>localhost</host>
 				<username>user</username>
 				<password>123456</password>
-				<dbname>baseApp</dbname>
+				<dbname>alfred_home</dbname>
 				<port>3306</port>
 			</config>
 		</db>

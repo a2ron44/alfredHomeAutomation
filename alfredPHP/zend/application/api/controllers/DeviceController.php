@@ -12,20 +12,24 @@ class Api_DeviceController extends Base_Rest_Controller {
 		);
 		
 		$this->setRequireAuth();
-		
 	}
 
 	public function indexAction(){
 
 		Base_Log::info("index Action");
 		
-		echo Zend_Json::encode($this->_todo);
-	}
-
-	public function listAction(){
-
-		Base_Log::info("list Action");
-		$this->_forward('index');
+		try{
+			$deviceModel = new Model_Device();
+			
+			$group = $this->_request->getParam('group', null);
+			
+			$devices = $deviceModel->getAllDevices(1, $group);
+			echo Zend_Json::encode($devices);
+		} catch(Exception $e){
+			Base_Log::warn($e->getMessage());
+			$this->setHttpResponse(500);
+			echo Zend_Json::encode('Error receiving devices');
+		}
 	}
 
 	public function getAction(){
@@ -53,7 +57,20 @@ class Api_DeviceController extends Base_Rest_Controller {
 	public function putAction(){
 
 		Base_Log::info("put Action");
-		// action body
+		
+		try{
+			$deviceModel = new Model_Device();
+			$accountId = '1';
+			$deviceId = $this->_request->getParam('device_id', null);
+			$state = $this->_request->getParam('state', null);
+				
+			$x = $deviceModel->changeState($accountId, $deviceId, $state);
+			echo Zend_Json::encode('Done');
+		} catch(Exception $e){
+			Base_Log::warn($e->getMessage());
+			$this->setHttpResponse(500);
+			echo Zend_Json::encode('Error receiving devices');
+		}
 	}
 
 	public function deleteAction(){
