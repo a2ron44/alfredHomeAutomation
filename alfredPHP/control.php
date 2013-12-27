@@ -8,7 +8,7 @@ $sendVal = $_POST['sendVal'];
 
 
 $cmd = '183*' . $sendVal;
-echo $cmd; die('x');
+
 exec("/usr/bin/python /alfred/www/alfredPHP/controller.py O " . $cmd, $output);
 
 $result->returnCode = 1;
