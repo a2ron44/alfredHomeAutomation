@@ -37,8 +37,8 @@
 					<td><div data-role="fieldcontain" class="ui-field-contain ui-body ">
 							<label for="device_10">Lamp:</label> <select name="device_10"
 								id="device_10" data-role="slider" class="dev_switchOF">
-								<option value="off">Off</option>
-								<option value="on" selected>On</option>
+								<option value="5526844">Off</option>
+								<option value="5526835" selected>On</option>
 							</select>
 
 						</div></td>
@@ -48,8 +48,8 @@
 						<div data-role="fieldcontain" class="ui-field-contain ui-body ">
 							<label for="device_11">Night Light:</label> <select
 								name="device_11" id="device_11" data-role="slider" class="dev_switchOF">
-								<option value="off">Off</option>
-								<option value="on">On</option>
+								<option value="5526988">Off</option>
+								<option value="5526979">On</option>
 							</select>
 						</div>
 					</td>
@@ -72,18 +72,11 @@ $('.dev_switchOF').on('change', function(event){
 	var val = $(this).val();
 	var sendVal = 0;
 	var obj = new Object();
-	
-	if(val == 'on'){
-		sendVal = 1;
-	} else {
-		sendVal = 0;
-	}
 
 	var url =  './control.php';
 
-	obj.devId = devId;
-	obj.sendVal = sendVal;
-	
+	obj.sendVal = val;
+	alert(JSON.stringify(obj));return;
 	$.ajax({
          type: "POST",
          url: url,

@@ -1,8 +1,8 @@
 import smbus, sys
 import time
-
+# for RPI version 1, use "bus = smbus.SMBus(0)"
 bus = smbus.SMBus(1)
-# i2c address
+# This is the address we setup in the Arduino Program
 address = 0x04
 
 if len(sys.argv) < 3:
@@ -31,6 +31,6 @@ writeNumber()
 
 # sleep one second
 time.sleep(1)
-
+    
 res = readNumber()
 print res

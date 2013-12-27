@@ -64,14 +64,21 @@ class Model_Device extends Base_Db_Table {
 				'device_type' => 'device_type',
 				'group_id' => 'group_id',
 				'state' => 'state',
+				'cmd_0' => 'cmd_0',
+				'cmd_1' => 'cmd_1',
+				'cmd_2' => 'cmd_2',
 				'ctrl_user' => 'ctrl_user',
 				'ctrl_dt' => 'ctrl_dt',
 				'group_name' => 'group.group_name',
-				'sort_seq' => 'group.sort_seq' 
+				'sort_seq' => 'sort_seq' 
 		))
 			->join('group', 'device.group_id = group.group_id', array(
-				'group_name',
-				'sort_seq' 
+				'group_name' => 'group_name',
+				'group_sort_seq' => 'sort_seq'
+		))
+			->join('device_type', 'device.device_type = device_type.device_type', array(
+				'type_code' => 'type_code',
+				'dflt_state' 
 		))
 			->where('acc_id = ?', $account)
 			->order((array(
@@ -101,13 +108,11 @@ class Model_Device extends Base_Db_Table {
 				throw new Base_Exception_Validate('Device not accessible');
 			}
 			
-			
 			$row->state = $newState;
 			$row->ctrl_dt = $this->_createDt;
 			$row->ctrl_user = $this->_createUser;
 			
 			$row->save();
-			
 		} catch(Base_Exception_Validate $e){
 			throw $e;
 		} catch(Zend_Db_Exception $e){
