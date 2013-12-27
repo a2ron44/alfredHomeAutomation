@@ -76,7 +76,7 @@ $('.dev_switchOF').on('change', function(event){
 	var url =  './control.php';
 
 	obj.sendVal = val;
-	alert(JSON.stringify(obj));return;
+
 	$.ajax({
          type: "POST",
          url: url,
