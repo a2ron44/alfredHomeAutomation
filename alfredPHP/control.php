@@ -9,7 +9,7 @@ $sendVal = $_POST['sendVal'];
 
 $cmd = '183*' . $sendVal;
 
-exec("/usr/bin/python /alfred/www/alfredPHP/controller.py 0" . $cmd, $output);
+exec("/usr/bin/python /alfred/www/alfredPHP/controller.py 0 " . $cmd, $output);
 
 $result->returnCode = 1;
 $result->msg = $output;
